@@ -1,14 +1,14 @@
 function twoSum(nums, target) {
     let hash = {};
 
-    for(var index in nums) {
-        let result = target - nums[index]
-
-        if(hash[result]) {
-            return [hash[result], index]
+    for(let i in nums) {
+        let r = target - nums[i]
+        
+        if(hash[r]) {
+            return [hash[r], i]
         }
-
-        hash[nums[index]] = index
+        
+        hash[nums[i]] = i
     }
 }
 
